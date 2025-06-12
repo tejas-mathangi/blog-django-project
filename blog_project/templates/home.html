@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    {% for post in object_list %}
+        <div class="post">
+             <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.body}}</p>
+            <!-- <p>Published on: {{ post.created_at }}</p> -->
+        </div>
+    {% empty %}
+        <p>No posts available.</p>
+    {% endfor %}
+{% endblock content %}  
+
+<!-- {% block extra_js %}
+    <script>
+        // You can add any additional JavaScript here if needed
+        console.log("Home page loaded");
+    </script>
+{% endblock %} -->
+
+
