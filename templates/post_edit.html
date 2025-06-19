@@ -1,0 +1,11 @@
+{extend 'base.html'}
+
+{% block content %} 
+<div class="post-form">EDIT POST</div>
+<form action="" method="POST" class="post-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" value="Update">Update Post</button> 
+    <a href="{% url 'post_detail post.pk %}">Back to Post</a>
+</form>
+{% endblock %}
