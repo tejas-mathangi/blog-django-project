@@ -7,5 +7,7 @@
     </div>  
     <div class="post-actions">
         <a href="{% url 'post_edit' object.pk %}">Edit Post</a>
-    </div>  
+        <a href="{% url 'post_delete' object.pk %}">Delete Post</a>
+        <a href="{% url 'home' %}">Back to Posts</a>
+    </div>
 {% endblock content %}
